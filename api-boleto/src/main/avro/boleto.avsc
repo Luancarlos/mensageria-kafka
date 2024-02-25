@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "namespace": "br.com.rocha.avro",
+  "name": "Boleto",
+  "fields": [
+    {
+      "name": "codigoBarras",
+      "type": "string",
+      "doc": "The string is a unicode character sequence."
+    },
+    {
+      "name": "situacaoBoleto",
+      "type": "int",
+      "doc": "The int type is a 32-bit signed integer."
+    }
+  ]
+}
