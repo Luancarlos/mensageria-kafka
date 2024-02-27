@@ -7,6 +7,7 @@ import lombok.AllArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.support.Acknowledgment;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -17,8 +18,9 @@ public class NotifcacaoConsumer {
     private final BoletoService boletoService;
 
     @KafkaListener(topics = "${spring.kafka.topico-notificacao}")
-    public void consumer(Boleto boleto) {
+    public void consumer(Boleto boleto, Acknowledgment acknowledgment) {
         LOGGER.info(String.format("Consumindo notificacao -> %s", boleto));
         this.boletoService.atualizar(BoletoMapper.toEntity(boleto));
+        acknowledgment.acknowledge();
     }
 }

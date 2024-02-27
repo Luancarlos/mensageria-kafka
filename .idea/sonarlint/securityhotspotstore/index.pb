@@ -75,5 +75,3 @@ Zvalidadorboleto/src/main/java/br/com/rocha/validadorboleto/service/PagarBoletoS
 Wvalidadorboleto/src/main/java/br/com/rocha/validadorboleto/config/KafkaTopicConfig.java,b/4/b4c208454d4883b7dddfc9a238c8eca117885d8f
 …
 Uapi-boleto/src/main/java/br/com/rocha/apiboleto/service/kafka/NotifcacaoConsumer.java,3/f/3fe9348c1be161ef660085bcd34f44af345234f0
-8
-REAME.md,8/d/8db6278812791f2caefc3f043859adcf4f9b3600
